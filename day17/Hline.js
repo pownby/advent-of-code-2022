@@ -15,11 +15,11 @@ export default class Hline extends Rock {
   }
 
   getCoordList() {
-    return [
+    return this.coordList || this.memoCoordList([
       getCoordString(this.x0, this.y0),
       getCoordString(this.x0 + 1, this.y0),
       getCoordString(this.x0 + 2, this.y0),
       getCoordString(this.x1, this.y0),
-    ];
+    ]);
   }
 }

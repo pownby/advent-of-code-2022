@@ -15,11 +15,11 @@ export default class Square extends Rock {
   }
 
   getCoordList() {
-    return [
+    return this.coordList || this.memoCoordList([
       getCoordString(this.x0, this.y0),
       getCoordString(this.x1, this.y0),
       getCoordString(this.x0, this.y1),
       getCoordString(this.x1, this.y1),
-    ];
+    ]);
   }
 }

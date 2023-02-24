@@ -15,11 +15,11 @@ export default class Vline extends Rock {
   }
 
   getCoordList() {
-    return [
+    return this.coordList || this.memoCoordList([
       getCoordString(this.x0, this.y0),
       getCoordString(this.x0, this.y0 + 1),
       getCoordString(this.x0, this.y0 + 2),
       getCoordString(this.x0, this.y1),
-    ];
+    ]);
   }
 }

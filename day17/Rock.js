@@ -90,4 +90,11 @@ export default class Rock {
     }
     return overlapsCoords(this, rock);
   }
+
+  memoCoordList(coordList) {
+    if (this.atRest) {
+      this.coordList = coordList;
+    }
+    return coordList;
+  }
 }
